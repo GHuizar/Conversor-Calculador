@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.sidenav {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 15px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+.sidenav p {
+  padding: 6px 6px 6px 6px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #E0E0E0;
+  display: block;
+}
+
+.sidenav div:hover {
+  color: #f1f1f1;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 100%; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .sidenav p {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <div align="center"><a href="principal.html" target="mainFrame"><img src="imagenes/icon3.png" width="30%" height="30%"><br>Home</a></div>
+  <p align="center">Calcular</p>
+  <br>
+  <a href="imc.html" target="mainFrame">IMC</a>
+  <br>
+  <a href="ddp.html" target="mainFrame">Distancia entre dos puntos</a>
+  <br>
+  <a href="adc.html" target="mainFrame">Área de un circulo</a>
+  <br>
+  <a href="adt.html" target="mainFrame">Área de un trapecio</a>
+  <br>
+  <a href="vpr.html" target="mainFrame">Volumen de un prisma rectangular</a>
+  <br>
+
+  <p align="center">Convertir</p>
+  <a href="eap.html" target="mainFrame">Euros a pesos</a>
+  <br>
+  <a href="mam.html" target="mainFrame">Millas a metros</a>
+  <br>
+  <a href="gcaf.html" target="mainFrame">Grados °C a °F</a>
+  <br><br>
+</div>
+</body>
+</html>

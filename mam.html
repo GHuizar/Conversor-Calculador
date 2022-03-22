@@ -1,0 +1,75 @@
+<html>
+<head>
+	<meta charset="utf-8">
+<style type="text/css">
+.inputcentrado {
+   text-align: center
+   }
+.button1 {
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #EBEBEB;
+}
+
+.button1:hover {
+  background-color: #AAAAAA;
+  color: white;
+}
+</style>
+</head>
+<body bgcolor="#E0E0E0">
+<h1 align="center" face="Bookman Old Style"><span style="font-size: 70px; font-family: 'Arial, Helvetica';">
+Millas a metros</span></h1>
+<h2 align="center">Una milla equivale a 1609.344 metros</h2>
+
+<br>
+<form align="center">
+<table align="center" width="90%" border="1" cellpadding="0">
+<tr>
+	<td width="25%" align="center"><br><font size="5">Cantidad:<br><input type="text" id="milla" size=5 style="width:220px; height:25px; background-color: #EBEBEB; font-size: 16px;"></font><br><br><br></td>
+	<td width="15%" align="center">
+		<input type="button" class="button1" value="Convertir" onclick="mime()" style="width:150px; height:30px;font-size: 16px;"><br></td>
+	<td width="15%" align="center">
+		<input type="reset" class="button1" value="Reset" style="width:150px; height:30px; font-size: 16px;"><br></td>
+	<td width="25%" align="center"><font size="5">Resultado:</font><br><input type="text" value="metros" class="inputcentrado" id="resultadomime" disabled style="width:250px; height:25px; background-color: #EBEBEB; font-size: 20px;;"><br><br></td>
+</tr>
+
+
+</table>
+</form>
+
+<script>
+function mime(){
+var milla = Number(document.getElementById("milla").value);
+var metros = milla * 1609.344
+var metros = metros.toFixed(2)
+document.getElementById("resultadomime").value = metros + " metros";
+}
+function memi(){
+var metro = Number(document.getElementById("metro").value);
+var millas = metro * 0.000621371
+var millas = millas.toFixed(2)
+document.getElementById("resultadomemi").value = millas + " millas";
+}
+</script>
+<br>
+<h1 align="center" face="Bookman Old Style"><span style="font-size: 70px; font-family: 'Arial, Helvetica';">
+Metros a millas</span></h1>
+<h2 align="center">Un metro equivale a 0.000621371 millas</h2>
+<br>
+<form align="center">
+<table align="center" width="90%" border="1" cellpadding="0">
+<tr>
+	<td width="25%" align="center"><br><font size="5">Cantidad:<br><input type="text" id="metro" size=5 style="width:220px; height:25px; background-color: #EBEBEB; font-size: 16px;"></font><br><br><br></td>
+	<td width="15%" align="center">
+		<input type="button" class="button1" value="Convertir" onclick="memi()" style="width:150px; height:30px;font-size: 16px;"><br></td>
+	<td width="15%" align="center">
+		<input type="reset" class="button1" value="Reset" style="width:150px; height:30px; font-size: 16px;"><br></td>
+	<td width="25%" align="center"><font size="5">Resultado:</font><br><input type="text" value="millas" class="inputcentrado" id="resultadomemi" disabled style="width:250px; height:25px; background-color: #EBEBEB; font-size: 20px;;"><br><br></td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>

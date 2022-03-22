@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<style type="text/css">
+.inputcentrado {
+   text-align: center
+   }
+.button1 {
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #EBEBEB;
+}
+
+.button1:hover {
+  background-color: #AAAAAA;
+  color: white;
+}
+</style>
+</head>
+<body bgcolor="#E0E0E0">
+<h1 align="center" face="Bookman Old Style"><span style="font-size: 70px; font-family: 'Arial, Helvetica';">
+Distancia entre dos puntos</span></h1>
+<h2 align="center">d(A → B) = √( (x2-x1)² + (y2-y1)² )</h2>
+
+<br>
+<form align="center">
+<table align="center" width="75%">
+<tr>
+	<td width="25%" align="center"><font size="7">Punto "A"<br><img src="imagenes/punto.png" width="70" height="70"></font></td>
+	<td width="50%" align="center" colspan="2"><img src="imagenes/flecha.png" width="550" height="150"></td>
+	<td width="25%" align="center"><font size="7">Punto "B"<br><img src="imagenes/punto.png" width="70" height="70"></font></td>
+</tr>
+
+<tr>
+	<td align="center"><br><br><br><font size="7">Coordenadas</font><br><br></td>
+	<td align="center" width="25%"><br><br><br><input type="button" class="button1" value="Calcular" onclick="calcular()" style="width:150px; height:30px; font-size: 16px;"></td>
+	<td align="center" width="25%"><br><br><br>
+		<input type="reset" class="button1" value="Reset" style="width:150px; height:30px; font-size: 16px;"></td>
+
+	<td align="center"><br><br><br><font size="7">Coordenadas</font><br><br></td>
+</tr>
+
+<tr>
+	<td align="center"><br><font size="5">"X"
+		<input type="text" id="x1" size=5 style="width:150px; height:20px; background-color: #ECECEC; font-size: 16px;"><br><br>"Y" <input type="text" id="y1" size=5 style="width:150px; height:20px; background-color: #ECECEC; font-size: 16px;">
+	</font><br><br></td>
+
+	<td align="center" colspan="2"><br><font size="5">Resultado:</font><br><input type="text" class="inputcentrado" id="resultado" disabled style="width:260px; height:20px; background-color: #D8D8D8; font-size: 16px;"></td>
+
+	<td align="center"><br><font size="5">"X" 
+		<input type="text" id="x2" size=5 style="width:150px; height:20px; background-color: #ECECEC; font-size: 16px;"><br><br>"Y" 
+		<input type="text" id="y2" size=5 style="width:150px; height:20px; background-color: #ECECEC; font-size: 16px;">
+	</font><br><br></td>
+</tr>
+</table>
+<form align="center">
+<script>
+function calcular(){
+var x1 = Number(document.getElementById("x1").value);
+var y1 = Number(document.getElementById("y1").value);
+var x2 = Number(document.getElementById("x2").value);
+var y2 = Number(document.getElementById("y2").value);
+
+var distancia = Math.sqrt( ((x2-x1)**2) + ((y2-y1)**2));
+var distancia = distancia.toFixed(2)
+document.getElementById("resultado").value = distancia;
+}
+</script>
+
+</body>
+</html>

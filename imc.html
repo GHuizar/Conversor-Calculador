@@ -1,0 +1,516 @@
+<html>
+<head>
+	<meta charset="utf-8">
+<link href="styles/select.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#E0E0E0">
+<h1 align="center" face="Bookman Old Style"><span style="font-size: 80px; font-family: 'Arial, Helvetica';">
+Cálculo de IMC</span></h1>
+
+<form align="center">
+<table align="center" width="100%" border="0" cellpadding="0">
+<tr>
+	<td width="25%" align="center"><img src="imagenes/sm.png" width="100" height="100"><img src="imagenes/sf.png" width="100" height="100"></td>
+	<td width="15%" align="center">
+		<div class="select" tabindex="1" style="display:flex; align-items:center; font-family: sans-serif; color:#FFF;">
+  <input class="selectopt" name="genero" value="1" type="radio" id="opt1">
+  <label for="opt1" class="option">Masculino</label>
+  
+  <input class="selectopt" type="radio" name="genero" checked>
+  <label class="option">Seleccione su sexo</label>
+  
+  <input class="selectopt" name="genero" value="2" type="radio" id="opt2">
+  <label for="opt2" class="option">Femenino</label>
+</div></td>
+
+<td width="15%" align="center">
+    <div class="select" tabindex="1" style="display:flex; align-items:center; font-family: sans-serif; color:#FFF;">
+	<input class="selectopt" type="radio" name="edad" checked>
+  <label class="option">Seleccione su edad</label>
+  <input class="selectopt" name="edad" value="1" type="radio" id="op1">
+  <label for="op1" class="option">1 año</label> 
+  <input class="selectopt" name="edad" value="2" type="radio" id="op2">
+  <label for="op2" class="option">2 años</label>
+  <input class="selectopt" name="edad" value="3" type="radio" id="op3">
+  <label for="op3" class="option">3 años</label>
+  <input class="selectopt" name="edad" value="4" type="radio" id="op4">
+  <label for="op4" class="option">4 años</label>
+  <input class="selectopt" name="edad" value="5" type="radio" id="op5">
+  <label for="op5" class="option">5 años</label>
+  <input class="selectopt" name="edad" value="6" type="radio" id="op6">
+  <label for="op6" class="option">6 años</label>
+  <input class="selectopt" name="edad" value="7" type="radio" id="op7">
+  <label for="op7" class="option">7 años</label>
+  <input class="selectopt" name="edad" value="8" type="radio" id="op8">
+  <label for="op8" class="option">8 años</label>
+  <input class="selectopt" name="edad" value="9" type="radio" id="op9">
+  <label for="op9" class="option">9 años</label>
+  <input class="selectopt" name="edad" value="10" type="radio" id="op10">
+  <label for="op10" class="option">10 años</label>
+  <input class="selectopt" name="edad" value="11" type="radio" id="op11">
+  <label for="op11" class="option">11 años</label>
+  <input class="selectopt" name="edad" value="12" type="radio" id="op12">
+  <label for="op12" class="option">12 años</label>
+  <input class="selectopt" name="edad" value="13" type="radio" id="op13">
+  <label for="op13" class="option">13 años</label>
+  <input class="selectopt" name="edad" value="14" type="radio" id="op14">
+  <label for="op14" class="option">14 años</label>
+  <input class="selectopt" name="edad" value="15" type="radio" id="op15">
+  <label for="op15" class="option">15 años</label>
+  <input class="selectopt" name="edad" value="16" type="radio" id="op16">
+  <label for="op16" class="option">16 años</label>
+  <input class="selectopt" name="edad" value="17" type="radio" id="op17">
+  <label for="op17" class="option">17 años</label>
+  <input class="selectopt" name="edad" value="18" type="radio" id="op18">
+  <label for="op18" class="option">18 años</label>
+  <input class="selectopt" name="edad" value="19" type="radio" id="op19">
+  <label for="op19" class="option">19 años</label>
+  <input class="selectopt" name="edad" value="20" type="radio" id="op20">
+  <label for="op20" class="option">20 o más años</label>
+</div>
+</td>
+	<td width="25%" align="center"><img src="imagenes/edad.png" width="250" height="160"></td>
+</tr>
+<tr>
+	<td width="25%" align="center"><br><img src="imagenes/altura.png" width="140" height="140"></td>
+	<td width="15%" align="center">
+		<font size="5">Estatura:<br><input type="text" id="estra" size=5 style="width:220px; height:25px; background-color: #EBEBEB; font-size: 16px;"></font>
+        <br><font size="4">(En metros, utilizar decimales)</font></td>
+	<td width="15%" align="center">
+		<font size="5">Peso:<br><input type="text" id="peso" size=5 style="width:220px; height:25px; background-color: #EBEBEB; font-size: 16px;"></font>
+        <br><font size="3">(En kg, se pueden usar decimales)</font></td>
+	<td width="25%" align="center"><br><img src="imagenes/bascula.png" width="140" height="140"></td>
+</tr>
+<tr>
+	<td width="25%" align="center"></td>
+	<td width="15%" align="center"><br>
+	<input type="button" class="button1" value="Calcular" onclick="calcular()" style="width:150px; height:30px;font-size: 16px;"><br><br></td>
+	<td width="15%" align="center">
+		<input type="reset" class="button1" value="Reset" style="width:150px; height:30px; font-size: 16px;"><br></td>
+	<td width="25%" align="center"></td>
+</tr>
+<tr>
+	<td></td>
+	<td align="center" colspan="2"><br><font size="5">Resultado:</font><br><input type="text" value="IMC" class="inputcentrado" id="resultado" disabled style="width:550px; height:30px; background-color: #EBEBEB; font-size: 20px;;"><br><br></td>
+</tr>
+</table>
+<script>
+function calcular(){
+var estatura = Number(document.getElementById("estra").value);
+var peso = Number(document.getElementById("peso").value);
+var sexo = Number(document.querySelector('input[name = genero]:checked').value);
+var edad = Number(document.querySelector('input[name = edad]:checked').value);
+var imc = (peso / (estatura**2));
+var imc = imc.toFixed(2)
+
+if (edad <= 2) {
+    if (sexo==1) {
+        if (imc < 15 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 15){
+        if (imc <= 18.2) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 18.2){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 14.8 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14.8){
+        if (imc <= 18) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 18){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 3) {       
+    if (sexo==1) {
+        if (imc < 14.7 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14.7){
+        if (imc <= 17.4) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 17.4){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 14.4 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14.4){
+        if (imc <= 17.2) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        if(imc > 17.2){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 4) {           
+    if (sexo==1) {
+        if (imc < 14.4 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14.4){
+        if (imc <= 17) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 17){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 14 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14){
+        if (imc <= 16.8) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 16.8){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 5) {        
+    if (sexo==1) {
+        if (imc < 14.2 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14.2){
+        if (imc <= 16.8) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 16.8){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 13.8 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 13.8){
+        if (imc <= 16.8) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 16.8){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 6) {     
+    if (sexo==1) {
+        if (imc < 14 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14){
+        if (imc <= 17) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 17){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 13.8 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 13.8){
+        if (imc <= 17) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 17){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 7) { 
+    if (sexo==1) {
+        if (imc < 14 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14){
+        if (imc <= 17.4) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 17.4){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 13.8 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 13.8){
+        if (imc <= 17.6) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 17.6){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 8) {        
+    if (sexo==1) {
+        if (imc < 14.2 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14.2){
+        if (imc <= 18) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 18){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 14 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14){
+        if (imc <= 18.3) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 18.3){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 9) {    
+    if (sexo==1) {
+        if (imc < 14.4 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14.4){
+        if (imc <= 18.6) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 18.6){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 14.2 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14.2){
+        if (imc <= 19) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 19){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 10) {  
+    if (sexo==1) {
+        if (imc < 14.6 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14.6){
+        if (imc <= 19.4) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 19.4){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 14.5 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 14.5){
+        if (imc <= 20) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 20){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 11) {   
+    if (sexo==1) {
+        if (imc < 15 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 15){
+        if (imc <= 20.2) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 20.2){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 15 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 15){
+        if (imc <= 20.8) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 20.8){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 12) { 
+    if (sexo==1) {
+        if (imc < 15.4 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 15.4){
+        if (imc <= 21) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 21){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 15.4 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 15.4){
+        if (imc <= 21.7) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 21.7){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 13) { 
+    if (sexo==1) {
+        if (imc < 16 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 16){
+        if (imc <= 21.8) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 21.8){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 15.9 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 15.9){
+        if (imc <= 22.6) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 22.6){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 14) {  
+    if (sexo==1) {
+        if (imc < 16.5) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 16.5){
+        if (imc <= 22.6) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 22.6){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 16.4 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 16.4){
+        if (imc <= 23.3) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 23.3){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 15) {
+    if (sexo==1) {
+        if (imc < 17.1 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 17.1){
+        if (imc <= 23.4) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 23.4){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 16.9 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 16.9){
+        if (imc <= 24) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 24){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 16) {   
+    if (sexo==1) {
+        if (imc < 17.7 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 17.7){
+        if (imc <= 24.2) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 24.2){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 17.4 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 17.4){
+        if (imc <= 24.6) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 24.6){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 17) {
+    if (sexo==1) {
+        if (imc < 18.3 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 18.3){
+        if (imc <= 24.9) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 24.9){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 17.8 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 17.8){
+        if (imc <= 25.2) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 25.2){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 18) { 
+    if (sexo==1) {
+        if (imc < 18.8 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 18.8){
+        if (imc <= 25.6) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 25.6){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 18.2 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 18.2){
+        if (imc <= 25.6) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 25.6){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 19) { 
+    if (sexo==1) {
+        if (imc < 19.4 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 19.4){
+        if (imc <= 26.4) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 26.4){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }   
+    }
+    if (sexo==2) {
+        if (imc < 18.4 ) {document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";}
+    else if(imc >= 18.4){
+        if (imc <= 26) {
+            document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";}
+        
+        if(imc > 26){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+    }
+}
+if (edad == 20) {
+    if (imc < 18.5){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más bajo de lo normal.";
+    }
+    else if(imc >= 18.5){
+        if (imc <= 24.9) {}
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es normal.";
+        if(imc >= 25){
+        document.getElementById("resultado").value = "Su IMC es de " + imc + ", es más elevado de lo normal.";}
+    }
+}
+}
+</script>
+
+</body>
+</html>
